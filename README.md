@@ -23,6 +23,7 @@ Build a professional, field-specific CV in minutes. Smart questionnaire that ask
 
 ### 📁 Project Structure
 
+```
 cv-builder/
 ├── index.html
 ├── css/
@@ -43,6 +44,7 @@ cv-builder/
 │   └── img/
 ├── LICENSE
 └── README.md
+```
 
 
 
