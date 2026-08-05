@@ -1,0 +1,397 @@
+/* ============================================
+   CV Templates - Classic, Modern, Minimal
+   Built by 0x9z | MIT License
+   ============================================ */
+
+/* ============================================
+   Base CV Styles (shared across all templates)
+   ============================================ */
+.cv-content {
+  padding: 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #1a1a2e;
+}
+
+.cv-content * {
+  box-sizing: border-box;
+}
+
+.cv-content h1,
+.cv-content h2,
+.cv-content h3,
+.cv-content h4 {
+  margin: 0;
+  font-weight: 700;
+}
+
+.cv-content p {
+  margin: 0;
+}
+
+.cv-content ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cv-content li {
+  margin-bottom: 0.2rem;
+}
+
+/* Section spacing */
+.cv-section {
+  margin-bottom: 1rem;
+}
+
+.cv-section-title {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px solid #1a1a2e;
+}
+
+.cv-section-title-light {
+  border-bottom-color: #ccc;
+}
+
+/* Entry (experience, education item) */
+.cv-entry {
+  margin-bottom: 0.7rem;
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 0.1rem;
+}
+
+.cv-entry-title {
+  font-weight: 700;
+  font-size: 11pt;
+}
+
+.cv-entry-subtitle {
+  font-style: italic;
+  color: #444;
+  font-size: 10pt;
+}
+
+.cv-entry-date {
+  font-size: 10pt;
+  color: #555;
+  white-space: nowrap;
+}
+
+.cv-entry-location {
+  font-size: 10pt;
+  color: #666;
+}
+
+.cv-entry-bullets {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Skills */
+.cv-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+}
+
+.cv-skill-tag {
+  background: #e8ecf1;
+  padding: 0.2rem 0.6rem;
+  border-radius: 3px;
+  font-size: 9pt;
+  color: #1a1a2e;
+}
+
+/* Contact row */
+.cv-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 10pt;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.cv-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Certifications */
+.cv-cert-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10pt;
+  margin-bottom: 0.15rem;
+}
+
+.cv-cert-name {
+  font-weight: 600;
+}
+
+.cv-cert-issuer {
+  color: #555;
+  font-style: italic;
+}
+
+.cv-cert-date {
+  color: #777;
+  font-size: 9pt;
+}
+
+/* Summary */
+.cv-summary {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+/* Languages */
+.cv-lang-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  font-size: 10pt;
+}
+
+.cv-lang-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cv-lang-level {
+  color: #777;
+  font-size: 9pt;
+}
+
+/* ============================================
+   TEMPLATE 1: CLASSIC
+   Traditional, serif fonts, clean structure
+   ============================================ */
+.template-classic .cv-content {
+  padding: 2.5rem 2.5rem;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+.template-classic .cv-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 3px double #1a1a2e;
+}
+
+.template-classic .cv-name {
+  font-size: 24pt;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.template-classic .cv-title-line {
+  font-size: 11pt;
+  color: #444;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.template-classic .cv-contact-row {
+  justify-content: center;
+  font-size: 10pt;
+  color: #555;
+}
+
+.template-classic .cv-section-title {
+  font-size: 11pt;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #1a1a2e;
+  margin-top: 0.3rem;
+}
+
+.template-classic .cv-entry-bullets li {
+  font-size: 10pt;
+  line-height: 1.5;
+}
+
+/* ============================================
+   TEMPLATE 2: MODERN
+   Sans-serif, color accents, two-column feel
+   ============================================ */
+.template-modern .cv-content {
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+  display: flex;
+  min-height: 297mm;
+}
+
+.template-modern .cv-sidebar {
+  width: 35%;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  padding: 2rem 1.5rem;
+}
+
+.template-modern .cv-main {
+  width: 65%;
+  padding: 2rem 2rem;
+}
+
+.template-modern .cv-name {
+  font-size: 22pt;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.template-modern .cv-title-line {
+  font-size: 10pt;
+  color: var(--accent, #00c8ff);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.template-modern .cv-sidebar .cv-section-title {
+  color: #fff;
+  border-bottom-color: #444;
+  font-size: 10pt;
+  letter-spacing: 1px;
+}
+
+.template-modern .cv-sidebar .cv-skill-tag {
+  background: #2a2a42;
+  color: #ccc;
+  font-size: 8pt;
+}
+
+.template-modern .cv-sidebar .cv-contact-row {
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #bbb;
+}
+
+.template-modern .cv-main .cv-section-title {
+  color: #1a1a2e;
+  border-bottom-color: #1a1a2e;
+  font-size: 11pt;
+}
+
+.template-modern .cv-entry-bullets {
+  color: #333;
+}
+
+/* ============================================
+   TEMPLATE 3: MINIMAL
+   Lots of whitespace, clean typography
+   ============================================ */
+.template-minimal .cv-content {
+  padding: 3rem 3.5rem;
+  font-family: 'Helvetica Neue', 'Inter', 'Segoe UI', sans-serif;
+  color: #2a2a2a;
+}
+
+.template-minimal .cv-header {
+  margin-bottom: 2rem;
+}
+
+.template-minimal .cv-name {
+  font-size: 26pt;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-bottom: 0.2rem;
+}
+
+.template-minimal .cv-title-line {
+  font-size: 11pt;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.template-minimal .cv-contact-row {
+  gap: 1.5rem;
+  color: #888;
+  font-size: 10pt;
+}
+
+.template-minimal .cv-section-title {
+  font-size: 10pt;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+  margin-top: 1rem;
+}
+
+.template-minimal .cv-entry-title {
+  font-size: 11pt;
+}
+
+.template-minimal .cv-skill-tag {
+  background: #f5f5f5;
+  color: #555;
+  border-radius: 0;
+  font-size: 9pt;
+}
+
+/* ============================================
+   Print Styles (shared)
+   ============================================ */
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .header,
+  .footer,
+  .form-panel,
+  .preview-toolbar,
+  .modal,
+  .modal-overlay {
+    display: none !important;
+  }
+
+  .preview-panel {
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .preview-wrapper {
+    padding: 0;
+    background: #fff;
+    overflow: visible;
+  }
+
+  .preview-page {
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+    transform: none !important;
+  }
+
+  .cv-placeholder {
+    display: none;
+  }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
