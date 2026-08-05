@@ -26,21 +26,23 @@ Build a professional, field-specific CV in minutes. Smart questionnaire that ask
 cv-builder/
 ├── index.html
 ├── css/
-│ ├── style.css
-│ ├── templates.css
-│ └── print.css
+│   ├── style.css
+│   ├── templates.css
+│   └── print.css
 ├── js/
-│ ├── app.js
-│ ├── state.js
-│ ├── questions.js
-│ ├── preview.js
-│ ├── templates.js
-│ ├── pdf.js
-│ ├── storage.js
-│ └── ai.js
-└── assets/
-├──── icons/
-└──── img/
+│   ├── app.js
+│   ├── state.js
+│   ├── questions.js
+│   ├── preview.js
+│   ├── templates.js
+│   ├── pdf.js
+│   ├── storage.js
+│   └── ai.js
+├── assets/
+│   ├── icons/
+│   └── img/
+├── LICENSE
+└── README.md
 
 
 
