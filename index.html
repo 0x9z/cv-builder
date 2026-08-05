@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>CV Builder | Build Field-Specific CVs</title>
+  <meta name="description" content="Build a professional, field-specific CV in minutes. Tailored for IT, Nursing, HR, Driving, and more.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="CV Builder | Field-Specific CVs in Minutes">
+  <meta property="og:description" content="Smart CV builder that asks the right questions based on your field.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:url" content="https://0x9z.github.io/cv-builder">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/templates.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">📄 CV Builder</div>
+    </div>
+    <div class="header-right">
+      <button id="btn-save" class="btn btn-outline" title="Save CV">💾 Save</button>
+      <button id="btn-load" class="btn btn-outline" title="Load CV">📂 Load</button>
+      <button id="btn-new" class="btn btn-outline" title="Start New">🆕 New</button>
+      <span class="header-divider">|</span>
+      <span id="step-indicator" class="step-indicator">Step 1 of 8</span>
+    </div>
+  </header>
+
+  <!-- Main Layout: Split Screen -->
+  <main class="main-layout">
+
+    <!-- Left Panel: Form -->
+    <section class="form-panel" id="form-panel">
+      <div class="form-container" id="form-container">
+        <!-- Field Selector (Step 1) -->
+        <div class="form-step active" id="step-field">
+          <h2 class="step-title">What field are you in?</h2>
+          <p class="step-desc">We'll ask the right questions based on your profession.</p>
+          <select id="field-select" class="form-select">
+            <option value="">-- Select your field --</option>
+            <option value="it">💻 IT & Technology</option>
+            <option value="nursing">🏥 Nursing & Healthcare</option>
+            <option value="hr">👥 Human Resources</option>
+            <option value="driving">🚛 Driving & Transport</option>
+            <option value="construction">🏗️ Construction & Trades</option>
+            <option value="finance">💰 Finance & Accounting</option>
+            <option value="education">📚 Education & Teaching</option>
+            <option value="sales">📈 Sales & Marketing</option>
+          </select>
+          <button id="btn-start" class="btn btn-primary" disabled>Start Building →</button>
+        </div>
+
+        <!-- Dynamic Questions (Steps 2-7) -->
+        <div class="form-step" id="step-questions">
+          <h2 class="step-title" id="question-title">Personal Information</h2>
+          <div class="question-progress">
+            <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+            <span class="progress-text" id="progress-text">Question 1 of 8</span>
+          </div>
+          <div id="question-content"></div>
+          <div class="step-buttons">
+            <button id="btn-prev" class="btn btn-outline" style="display:none;">← Back</button>
+            <button id="btn-next" class="btn btn-primary">Next →</button>
+            <button id="btn-skip" class="btn btn-text">Skip for now</button>
+          </div>
+        </div>
+
+        <!-- Template Selection (Step 8) -->
+        <div class="form-step" id="step-template">
+          <h2 class="step-title">Choose a Template</h2>
+          <p class="step-desc">Pick a style that fits your field.</p>
+          <div class="template-options" id="template-options">
+            <div class="template-card active" data-template="classic">
+              <div class="template-preview classic-preview">Aa</div>
+              <span>Classic</span>
+            </div>
+            <div class="template-card" data-template="modern">
+              <div class="template-preview modern-preview">Aa</div>
+              <span>Modern</span>
+            </div>
+            <div class="template-card" data-template="minimal">
+              <div class="template-preview minimal-preview">Aa</div>
+              <span>Minimal</span>
+            </div>
+          </div>
+          <button id="btn-finish" class="btn btn-primary">Finish & Download →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Panel: Live Preview -->
+    <section class="preview-panel" id="preview-panel">
+      <div class="preview-toolbar">
+        <span class="preview-label">👁️ Live Preview</span>
+        <div class="preview-actions">
+          <button id="btn-zoom-out" class="btn btn-icon" title="Zoom Out">🔍−</button>
+          <span id="zoom-level">100%</span>
+          <button id="btn-zoom-in" class="btn btn-icon" title="Zoom In">🔍+</button>
+          <button id="btn-download" class="btn btn-primary btn-sm">📥 Download PDF</button>
+        </div>
+      </div>
+      <div class="preview-wrapper">
+        <div class="preview-page" id="cv-preview">
+          <div class="cv-placeholder">
+            <p>Your CV will appear here</p>
+            <p class="cv-placeholder-sub">Start by selecting your field →</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Built by <a href="https://github.com/0x9z" target="_blank">0x9z</a> | <a href="https://github.com/0x9z/cv-builder" target="_blank">Open Source (MIT)</a></p>
+  </footer>
+
+  <!-- AI Enhancer Modal -->
+  <div class="modal" id="ai-modal">
+    <div class="modal-content">
+      <h3>✨ AI Enhancer</h3>
+      <p>Original:</p>
+      <div class="ai-original" id="ai-original"></div>
+      <p>Suggestion:</p>
+      <div class="ai-suggestion" id="ai-suggestion">Loading...</div>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" id="btn-accept-ai">✅ Accept</button>
+        <button class="btn btn-outline" id="btn-reject-ai">✖ Keep Original</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <!-- JavaScript -->
+  <script src="js/state.js"></script>
+  <script src="js/questions.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/pdf.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
