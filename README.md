@@ -2,6 +2,8 @@
 
 Build a professional, field-specific CV in minutes. Smart questionnaire that asks the right questions based on your profession.
 
+![Topology](topology.png)
+
 ### 🚀 Live Demo
 [https://0x9z.github.io/cv-builder](https://0x9z.github.io/cv-builder)
 
