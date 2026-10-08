@@ -4,6 +4,8 @@ Build a professional, field-specific CV in minutes. Smart questionnaire that ask
 
 ![Topology](topology.png)
 
+![AI Enhacement Tool](ai-enhace.png)
+
 ### 🚀 Live Demo
 [https://0x9z.github.io/cv-builder](https://0x9z.github.io/cv-builder)
 
